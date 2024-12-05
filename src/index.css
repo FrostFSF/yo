@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Figtree:ital,wght@0,300..900;1,300..900&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Noto+Sans:wght@300;400;500;600&family=Open+Sans:wght@400;500;600;700&family=Outfit:wght@100..900&family=Playpen+Sans:wght@100..800&family=Poppins:wght@200;300;400;600;700&family=Roboto:wght@400;500;700;900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    :root {
+        --primary-font: 'Urbanist';
+        --secondary-font: 'Kind Sans';
+        --quote-font: 'JHC Sineas';
+        --primary-highlight-color: #854d0e;
+        --title-font: ''
+    }
+    body {
+        scroll-behavior: smooth;
+        @apply bg-[#fffbf8]
+    }
+    @font-face {
+        font-family: 'Kind Sans';
+        src: url('../Fonts/kind_sans_thin/KindSansThin.otf');
+    }
+    @font-face {
+        font-family: 'Giphurs';
+        src: url('../Fonts/giphurs/Giphurs-Medium.ttf');
+    }
+    @font-face {
+        font-family: 'JHC Sineas';
+        src: url('../Fonts/JHC_sineas/JHCSineas-Extralight.otf');
+    }
+    @font-face {
+        font-family: 'Tasteful Sandwich';
+        src: url('../Fonts/tasteful-sandwich/TastefulSandwich.otf');
+    }
+
+    .font-tasteful {
+        font-family: 'Tasteful Sandwich';
+    }
+
+    .font-primary {
+        font-family: var(--primary-font);
+    }
+
+    .font-secondary {
+        font-family: var(--secondary-font);
+    }
+    
+    .font-quote {
+        font-family: var(--quote-font);
+    }
+
+    .primary-highlight {
+        color: var(--primary-highlight-color);
+    }
+
+    .title {
+        @apply text-[2rem] md:text-[3rem]
+    }
+
+    .strip {
+        background-image: linear-gradient(to right, rgba(0, 0, 0, 0.607), rgba(0, 0, 0, 0.607)), url('/assets/background.jpg');
+        background-size: contain;
+        background-position: center;
+        background-repeat: space;
+        font-family: var(--primary-font);
+
+        @apply h-[7vh] md:h-[5vh] w-full bg-[#282828] grid place-items-center text-gray-100 text-center text-[.7rem] md:text-[18px]
+    }
+
+    .mobile-slide-in {
+        right: 0;
+        animation: slide-in-for-mobile 0.5s ease-in-out;
+    }
+    
+    @keyframes slide-in-for-mobile {
+        0%{
+            transform: translateX(calc(100vw));
+        } 100% {
+            transform: translateX(0);
+        }
+    }
+    
+    .mobile-slide-out {
+        display: none;
+        /* opacity: 0; */
+        transform: translateX(10rem);
+        animation: slide-out-for-mobile 0.3s cubic-bezier(0.51, 0.07, 0.02, 0.62);
+    }
+    
+    @keyframes slide-out-for-mobile {
+        0%{
+            transform: translateX(-345px);
+            display: flex;
+            flex-direction: column;
+            /* opacity: 1; */
+        } 100% {
+            transform: translateX(10rem);
+            display: none;
+            /* opacity: 0; */
+        }
+    }
+
+    .reach-out {
+        background-image: url('assets/hand-drawn.png');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: 350px;
+        height: 200px;
+    }
+    
+    .section-4 {
+        background-image: url('assets/two-mannequins.jpg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 50vh;
+    }
+    
+    @media (max-width: 600px) {
+        .reach-out {
+            background-size: 250px;
+            height: 120px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .section-4 {
+            height: 30vh;
+        }
+    }
+
+}
