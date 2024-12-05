@@ -101,7 +101,7 @@
     }
 
     .reach-out {
-        background-image: url('assets/hand-drawn.png');
+        background-image: url('/assets/hand-drawn.png');
         background-position: top;
         background-repeat: no-repeat;
         background-size: 350px;
@@ -109,7 +109,7 @@
     }
     
     .section-4 {
-        background-image: url('assets/two-mannequins.jpg');
+        background-image: url('/assets/two-mannequins.jpg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
